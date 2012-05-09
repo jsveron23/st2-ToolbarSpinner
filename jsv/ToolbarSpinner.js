@@ -3,7 +3,6 @@ Ext.define('Ext.jsv.ToolbarSpinner', {
 	xtype : 'tbarspinner',
 	
     config: {
-		xtype: 'component',
 		style: 'font-size: 60%;',
 		align: 'right',
 		html : [
@@ -14,5 +13,13 @@ Ext.define('Ext.jsv.ToolbarSpinner', {
 				'<span class="x-loading-left"></span>',
 			'</div>'
 		].join('')
-    }
+    },
+
+	showSpinner: function() {
+		this.show();
+	},
+	
+	hideSpinner: function() {
+		this.hide();
+	}
 });

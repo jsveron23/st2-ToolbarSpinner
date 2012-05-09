@@ -6,10 +6,15 @@ Ext.application({
     name: 'ToolbarSpinner',
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+		'Ext.TitleBar',
+
+		'Ext.jsv.ToolbarSpinner'
     ],
 
     views: ['Main'],
+
+	controllers: ['Spinner'],
 
     icon: {
         57: 'resources/icons/Icon.png',
@@ -21,6 +26,10 @@ Ext.application({
     phoneStartupScreen: 'resources/loading/Homescreen.jpg',
     tabletStartupScreen: 'resources/loading/Homescreen~ipad.jpg',
 
+	viewport: {
+        autoMaximize: true
+    },
+
     launch: function() {
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
@@ -31,8 +40,8 @@ Ext.application({
 
     onUpdated: function() {
         Ext.Msg.confirm(
-            "Application Update",
-            "This application has just successfully been updated to the latest version. Reload now?",
+            'Application Update',
+            'This application has just successfully been updated to the latest version. Reload now?',
             function(buttonId) {
                 if (buttonId === 'yes') {
                     window.location.reload();
