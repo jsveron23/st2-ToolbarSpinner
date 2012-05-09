@@ -1,3 +1,14 @@
+/**
+ *
+ * @class    Ext.jsv.ToolbarSpinner
+ * @author   Ip Myung, Jin
+ * @blog     http://blog.werconnected.info/
+ * @twitter  https://twitter.com/#!/jsveron23
+ * @facebook http://www.facebook.com/jsveron23
+ * @email    jsveron23@gmail.com
+ *
+ */
+
 Ext.define('Ext.jsv.ToolbarSpinner', {
     extend: 'Ext.Component',
 	xtype : 'tbarspinner',
@@ -15,11 +26,11 @@ Ext.define('Ext.jsv.ToolbarSpinner', {
 		].join('')
     },
 
-	showSpinner: function() {
-		this.show();
-	},
-	
-	hideSpinner: function() {
-		this.hide();
-	}
+	// showSpinner: function() {
+	// 	this.show();
+	// },
+	// 
+	// hideSpinner: function() {
+	// 	this.hide();
+	// }
 });
