@@ -12,7 +12,7 @@ Ext.define('ToolbarSpinner.view.Main', {
                 items  : [{
                     docked: 'top',
                     xtype : 'titlebar',
-                    title : 'Ext.jsv.ToolbarSpnnier',
+                    title : 'Ext.jsv.ToolbarSpinner',
 					items : {
 						xtype : 'tbarspinner',
 						align : 'right',
