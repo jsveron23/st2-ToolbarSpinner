@@ -1,31 +1,26 @@
 Ext.define('ToolbarSpinner.view.Main', {
-    extend: 'Ext.tab.Panel',
+    extend: 'Ext.Container',
 
     config: {
-        tabBarPosition: 'bottom',
-
-        items: [
-            {
-                title  : 'Home',
-                iconCls: 'home',
-
-                items  : [{
-                    docked: 'top',
-                    xtype : 'titlebar',
-                    title : 'Ext.jsv.ToolbarSpinner',
-					items : {
-						xtype : 'tbarspinner',
-						align : 'right',
-						hidden: true
-					}
-                }, {
-					xtype: 'button',
-					text : 'Show Spinner',
-					id   : 'ToggleSpinner'
-				}],
-				
-				styleHtmlContent: true
-            }
-        ]
+		layout: 'fit',
+        items : [{
+			title  : 'Home',
+			iconCls: 'home',
+			items  : [{
+				docked: 'top',
+				xtype : 'titlebar',
+				title : 'Ext.jsv.ToolbarSpinner',
+				items : {
+					xtype : 'tbarspinner',
+					align : 'right',
+					hidden: true
+				}
+			}, {
+				xtype: 'button',
+				text : 'Show Spinner',
+				id   : 'ToggleSpinner'
+			}],
+			styleHtmlContent: true
+		}]
     }
 });
